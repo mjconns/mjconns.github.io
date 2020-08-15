@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="stylesheet.css" rel="stylesheet">
+    <title>Micah's place</title>
+
+</head>
+
+<body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.buttons').on('click', function () {
+                var target = $(this).data('target');
+                $('.divs').not(target).slideUp();
+                $(target).slideDown();
+            });
+        });
+    </script>
+
+    <!--base format taken from https://www.w3schools.com/bootstrap/bootstrap_get_started.asp and then intertwined with some from boostrap.com-->
+    <div class="mainContent">
+        <div class="card text-center">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Career</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hobbies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Examples</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="jumbotron text-center">
+            <h1>Welcome to my page, world!</h1>
+            <h5>The place of Micah Connelly's personal webpage</h5>
+            <p>Please check out the links below for more about me!</p>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3><a href="">Career</a></h3>
+                    <p>Learn more about my past work experiences</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3><a href="">Hobbies</a></h3>
+                    <p>These are the things I like to do</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3><a href="">Examples</a></h3>
+                    <p>Here I will demonstrate some of my capabilities</p>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="notes">
+            <h3>TO COME/sketches/ideas</h3>
+            <p>"Using the knowledge gained in last week’s market research assignment, design a prototype/sketch of the
+                portfolio's layout and intended functionality."
+                </br>
+                -Professor Krasso
+            </p>
+
+            <h5>My ideas include:</h5>
+            <ul>
+                <li>Single-page format</li>
+                <li>Each link will stay on the same page, just display new info</li>
+                <li>Career and Hobbies will just be about my work experience and interests</li>
+                <li>Examples will be all of the code requirements/repos listed for the project -- the gallery content
+                </li>
+            </ul>
+
+
+            <!-- 
+                I learned how to do this and used the baseline code from here: 
+                https://stackoverflow.com/questions/39554175/show-a-div-and-hide-other-when-i-click-on-an-anchor-button 
+            -->
+            <h5>Sketches:</h5>
+            <div class="toggler-wrap">
+                <div class="showHide">
+                    <a href="#" class="button1 buttons" data-target=".careerExample">Selecting "Career"</a>
+                    <a href="#" class="button2 buttons" data-target=".hobbiesExample">Selecting "Hobbies"</a>
+                    <a href="#" class="button3 buttons" data-target=".examplesExample">Selecting "Examples"</a>
+                </div>
+
+                <div class="careerExample divs">
+                    <img src="./images/baseSite_career.jpg" alt="career example" class="image">
+                </div>
+                <div class="hobbiesExample divs">
+                    <img src="./images/baseSite_hobbies.jpg" alt="hobbies example" class="image">
+                </div>
+                <div class="examplesExample divs">
+                    <img src="./images/baseSite_examples.jpg" alt="examples example" class="image">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
